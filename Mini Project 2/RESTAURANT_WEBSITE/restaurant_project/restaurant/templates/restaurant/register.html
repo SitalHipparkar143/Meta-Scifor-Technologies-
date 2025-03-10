@@ -1,0 +1,43 @@
+{% extends "restaurant/base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>SIGN UP</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            {{ form.username.label_tag }}
+            {{ form.username }}
+        </div>
+
+        <div>
+            {{ form.password1.label_tag }}
+            {{ form.password1 }}
+            <div class="password-info">
+<!--                <p>Your password must:</p>-->
+<!--                <ul>-->
+<!--                    <li>Be at least 8 characters long</li>-->
+<!--                    <li>Not be too similar to your personal information</li>-->
+<!--                    <li>Not be a commonly used password</li>-->
+<!--                    <li>Not be entirely numeric</li>-->
+<!--                </ul>-->
+            </div>
+        </div>
+
+        <div>
+            {{ form.password2.label_tag }}
+            {{ form.password2 }}
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <div class="login-link d-flex justify-content-center mt-3">
+    <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+</div>
+
+
+
+</div>
+{% endblock %}

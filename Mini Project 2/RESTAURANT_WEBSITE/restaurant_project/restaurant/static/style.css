@@ -1,0 +1,592 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #888;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #ff9800;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+/* Main Content */
+main {
+    padding: 40px;
+    text-align: center;
+}
+/* Hero Section Styling */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    background: #f8f8f8;
+    gap: 40px;
+}
+
+/* Left Side - Text Content */
+.hero-content {
+    max-width: 50%;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-content h1 span {
+    color: #ff6600;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+}
+
+.hero-content .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #ff6600;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.hero-content .btn:hover {
+    background: #cc5500;
+}
+
+/* Right Side - Image */
+.hero-image {
+    max-width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+}
+
+
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Container Styling */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Headings */
+h2 {
+    font-size: 36px;
+    color: #d32f2f;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 28px;
+    color: #444;
+    margin-top: 30px;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 0;
+    text-align: justify;
+}
+
+/* Highlighted Points */
+p span {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #d32f2f;
+}
+
+/* Add some spacing */
+.about-section {
+    padding: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+.why-choose-title {
+    text-align: center;
+    color: #b22222; /* Dark red */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.why-choose-container {
+    text-align: center;
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #d4a017; /* Golden yellow */
+}
+
+
+/* General Form Styling */
+.reservation-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.reservation-container h2 {
+    font-size: 40px;
+    color: #d32f2f;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.reservation-container p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.reservation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reservation-form input,
+.reservation-form select,
+.reservation-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+/* Button Styling */
+.btn-reserve {
+    background-color: #d32f2f;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-reserve:hover {
+    background-color: #b71c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .reservation-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .btn-reserve {
+        font-size: 16px;
+    }
+}
+
+
+/* Feedback Form Container */
+.feedback-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.feedback-container h2 {
+    font-size: 30px;
+    color: #d32f2f;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.feedback-container p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+/* Button Styling */
+.btn-submit {
+    background-color: #d32f2f;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: #b71c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feedback-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .btn-submit {
+        font-size: 16px;
+    }
+}
+
+/* Global Font Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings - Elegant Playfair Display */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #d32f2f; /* Elegant red theme */
+}
+
+/* Navigation Menu */
+nav ul {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Buttons */
+button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Forms */
+input, textarea, select {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+/* Footer Styling - Compact & Properly Aligned */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0; /* Adjusted padding */
+    margin-top: 20px;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Footer Container - Properly Aligning Content */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 10px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Footer Sections */
+.footer-info, .footer-hours, .footer-social {
+    width: 30%; /* Adjust width for better alignment */
+    text-align: left;
+}
+
+/* Footer Headings - Emphasized with a Clean Look */
+.footer-info h3,
+.footer-hours h3,
+.footer-social h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Different Colors for Each Heading */
+.footer-info h3 {
+    color: #ffcc00; /* Yellow */
+}
+
+.footer-hours h3 {
+    color: #4caf50; /* Green */
+}
+
+.footer-social h3 {
+    color: #ff6600; /* Orange */
+}
+
+/* Contact Details - Proper Spacing & Icons */
+.footer-info p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0;
+}
+
+.footer-info p img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Social Media Links */
+.footer-social a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 8px; /* Better spacing */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer-social a:hover {
+    color: #ff6600;
+}
+
+/* Copyright Text */
+.footer-copy {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.8;
+    text-align: center;
+    width: 100%;
+}
+
+/* Ensure Footer Stays at Bottom */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Responsive Footer (Mobile View) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .footer-info, .footer-hours, .footer-social {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer-info p {
+        justify-content: center;
+    }
+}
+
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    color: #b22222;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    background-color: #b22222;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container .error {
+    color: red;
+    font-size: 14px;
+}
+/* Center align the form and make it look clean */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between fields */
+    width: 100%;
+}
+
+/* Style the labels properly */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 3px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Input field styling */
+form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Improve button size */
+button {
+    width: 50%; /* Make the button smaller */
+    padding: 12px;
+}
+.login-link {
+    text-align: center;  /* Centers text horizontally */
+    margin-top: 10px;  /* Adds spacing from the form */
+}

@@ -1,0 +1,13 @@
+{% extends 'restaurant/base.html' %}
+{% block content %}
+<div class="reservation-container">
+    <h2>Book Your Table</h2>
+    <p>Reserve a table in advance and enjoy a delightful dining experience at Delicious Restaurant.</p>
+
+    <form method="post" class="reservation-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-reserve">Book Table</button>
+    </form>
+</div>
+{% endblock %}

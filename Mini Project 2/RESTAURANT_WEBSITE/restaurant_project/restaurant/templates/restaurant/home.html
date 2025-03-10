@@ -1,0 +1,28 @@
+
+{% extends 'restaurant/base.html' %}
+{% load static %}
+{% block content %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to <span>Delicious Restaurant</span></h1>
+        <p>Indulge in a fine dining experience with our exquisite dishes crafted by top chefs.
+   We serve the best flavors with a cozy and elegant ambiance.
+   Our menu is a fusion of traditional and modern cuisine, prepared with the freshest ingredients
+   to bring out authentic and rich flavors in every bite.
+   Whether you're here for a romantic dinner, a family gathering, or a casual meal with friends,
+   we promise an unforgettable culinary journey with warm hospitality.
+   Experience taste, comfort, and luxury all in one place at Delicious Restaurant.</p>
+
+
+        {% if not user.is_authenticated %}
+    <a href="{% url 'login' %}" class="btn btn-primary">Login to Your Account</a>
+{% else %}
+    <p class="welcome-msg">Welcome, <strong>{{ user.username }}</strong>! Enjoy your time at our restaurant.</p>
+{% endif %}
+
+    </div>
+    <div class="hero-image">
+        <img src="{% static 'images/restaurant.jpg' %}" alt="Restaurant Image">
+    </div>
+</section>
+{% endblock %}
