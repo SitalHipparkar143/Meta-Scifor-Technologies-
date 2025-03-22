@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h2 class="text-center mb-4">Meet Our Faculty</h2>
+     <hr>
+    <div class="row">
+        {% for faculty in faculties %}
+            <div class="col-md-4">
+                <div class="card faculty-card">
+                    <img src="{{ faculty.image.url }}" class="card-img-top" alt="{{ faculty.name }}">
+                    <div class="faculty-card-body">
+                        <h5>{{ faculty.name }}</h5>
+                        <p class="designation">{{ faculty.designation }}</p>
+                        <p class="card-text">{{ faculty.bio|truncatewords:30 }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
