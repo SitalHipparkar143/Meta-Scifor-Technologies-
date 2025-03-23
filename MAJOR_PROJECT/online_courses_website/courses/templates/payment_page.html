@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% block content %}
+    <h2 class="text-center">Payment for {{ course.title }}</h2>
+    <hr>
+    <p><strong>Course Price:</strong> ₹{{ course.price }}</p>
+
+    <button id="pay-btn" class="btn btn-success">Pay Now</button>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        document.getElementById("pay-btn").addEventListener("click", function() {
+            var options = {
+                "key": "{{ razorpay_key }}",
+                "amount": "{{ amount }}",
+                "currency": "INR",
+                "name": "Online Course",
+                "description": "Enroll in {{ course.title }}",
+                "order_id": "{{ order_id }}",
+                "handler": function(response) {
+                    fetch("{% url 'payment_success' course.id %}", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                            "X-CSRFToken": "{{ csrf_token }}"
+                        },
+                        body: new URLSearchParams({
+                            "razorpay_payment_id": response.razorpay_payment_id,
+                            "razorpay_order_id": response.razorpay_order_id
+                        })
+                    }).then(res => res.json()).then(data => {
+                        alert("✅ Payment Successful!");
+                        window.location.href = "{% url 'my_courses' %}";
+                    }).catch(error => console.error("❌ Error:", error));
+                },
+                "theme": {
+                    "color": "#F37254"
+                }
+            };
+
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+        });
+    </script>
+{% endblock %}
